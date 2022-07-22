@@ -1,5 +1,27 @@
 import React from 'react';
+const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
+const currentTheme = localStorage.getItem('ridBioTheme');
 
+if (currentTheme == 'light') {
+  document.body.classList.toggle('light-theme');
+} else if (currentTheme == 'dark') {
+  document.body.classList.toggle('dark-theme');
+}
+
+function handleToggle() {
+  if (prefersDarkTheme.matches) {
+    document.body.classList.toggle('light-theme');
+    var theme = document.body.classList.contains('light-theme')
+      ? 'light'
+      : 'dark';
+  } else {
+    document.body.classList.toggle('dark-theme');
+    var theme = document.body.classList.contains('dark-theme')
+      ? 'dark'
+      : 'light';
+  }
+  localStorage.setItem('ridBioTheme', theme);
+}
 const ColorToggle = () => {
   return (
     <div
@@ -7,7 +29,8 @@ const ColorToggle = () => {
       className='color-scheme-button'
       role='button'
       aria-label='Toggle Dark Mode'
-      tabIndex='0'>
+      tabIndex='0'
+    onClick={handleToggle}>
       <svg
         viewBox='0 0 54.927399 54.927399'
         version='1.1'

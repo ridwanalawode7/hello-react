@@ -1,11 +1,12 @@
 import React from "react";
 
-const HeaderLogo = () => {
+const HeaderLogo = (props) => {
     return (
       <div
         className='header-logo'
         role='img'
-        aria-label='Ridwan Alawode Header Logo'>
+        aria-label='Ridwan Alawode Header Logo'
+      onClick={()=>{props.onLinkClick('root001');}}>
         <svg viewBox='0 0 186.73811 19.025999' version='1.1'>
           <g id='layer1'>
             <path

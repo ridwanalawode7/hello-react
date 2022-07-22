@@ -4,7 +4,7 @@
   /* background-color: green; */
 }
 
-/* @font-face {
+@font-face {
   font-family: 'Aileron';
   src: url('aileron-kit/Aileron-Regular-webfont.woff') format('woff'),
     url('./aileron-kit/Aileron-Regular-webfont.ttf') format('truetype'),
@@ -16,7 +16,7 @@
   src: url('./bebas-neue-kit/BebasNeue-Regular.woff') format('woff'),
     url('./bebas-neue-kit/BebasNeue-Regular.ttf') format('truetype'),
     url('./bebas-neue-kit/BebasNeue-Regular.eot') format('embedded-opentype');
-} */
+}
 
 body {
   --color1: #1a1a1a;
@@ -115,15 +115,23 @@ body {
 
 h1,
 h2 {
-  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
+    sans-serif;
   font-size: 84px;
   font-weight: normal;
 }
 
 h3 {
- font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
+    sans-serif;
   font-size: 35px;
   font-weight: normal;
+}
+
+main {
+  width: 920px;
+  margin: 0 auto;
+  padding-top: 70px;
 }
 
 path,
@@ -131,7 +139,6 @@ rect {
   fill: var(--color2);
   transform: fill 200ms;
 }
-
 
 /* |Header */
 
@@ -145,14 +152,14 @@ header {
 }
 
 .box-holder {
-    width: 1px;
-    height: 1px;
+  width: 1px;
+  height: 1px;
 }
 
 .header-container {
   width: 960px;
   margin: 0 auto;
-  height: 100px;
+  height: 70px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -178,6 +185,7 @@ header {
 
 .header-logo {
   height: 20px;
+  cursor: pointer;
   /* align-self: center; */
   /* justify-self: center; */
 }
@@ -188,4 +196,60 @@ header {
 
 .header-logo path {
   fill: var(--color2);
+}
+
+.nav-button {
+  height: 20px;
+  cursor: pointer;
+}
+
+.nav-button svg {
+  height: 100%;
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+/* Project Card Component */
+.card {
+  background-color: #2b2b2b;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card-thumbnail {
+}
+
+.card-thumbnail h2 {
+  font-size: 9rem;
+  margin: 0;
+  text-align: right;
+  background-color: #1d1d1d;
+  padding: 10px;
+  border-radius: 20px 20px 0 0;
+}
+
+.project-desc {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-icon {
+  height: 15px;
+  opacity: 0.5;
+  transition: opacity 300ms;
+}
+
+.link-icon svg {
+  height: 100%;
+}
+
+.card:hover .link-icon {
+  opacity: 1;
 }

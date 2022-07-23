@@ -1,22 +1,11 @@
 import React from 'react';
 import ProjectCard from './mini-components/project-card';
 import { Link } from 'react-router-dom';
-// import projectIdMatch from './projectIdMatch';
-
-const projects = [
-  {
-    projectId: 1,
-    projectName: 'Country Flag',
-    linkPath: '/country-flag',
-  },
-  {
-    projectId: 2,
-    projectName: 'Counter App',
-    linkPath: '/counter-app',
-  },
-];
+import ProjectIndexes from './project-indexes';
 
 const CardHolder = (props) => {
+  const projects = ProjectIndexes()
+
   return (
     <div className='card-holder'>
       {projects.map((x, y) => (

@@ -1,12 +1,16 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeaderLogo = (props) => {
-    return (
+  return (
+    <Link to='/'>
       <div
         className='header-logo'
         role='img'
         aria-label='Ridwan Alawode Header Logo'
-      onClick={()=>{props.onLinkClick('root001');}}>
+        onClick={() => {
+          props.onLinkClick('root001');
+        }}>
         <svg viewBox='0 0 186.73811 19.025999' version='1.1'>
           <g id='layer1'>
             <path
@@ -20,7 +24,8 @@ const HeaderLogo = (props) => {
           </g>
         </svg>
       </div>
-    );
-}
+    </Link>
+  );
+};
 
 export default HeaderLogo;

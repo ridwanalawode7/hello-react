@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
     }
 
   return (
-    <div className='card' onClick={handleCardClick}>
+    <div className='card'>
       <div className='card-thumbnail'>
         <h2 className='thumbnail-no'>
           {pId.toString().length == 1 ? `0${pId}` : pId}

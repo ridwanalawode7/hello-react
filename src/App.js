@@ -5,6 +5,7 @@ import Header from './mini-components/header';
 import ViewController from './ViewController';
 import CountryFlag from './country-flags/CountryFlag';
 import CounterApp from './counter-excercise/CounterEx';
+import { Outlet } from 'react-router-dom';
 // import projectIdMatch from './projectIdMatch';
 
 const App = () => {
@@ -39,8 +40,8 @@ const App = () => {
 
   return (
     <div>
-      <Header onLinkClick={onLinkClick} />
       <ViewController page={page} />
+      <Outlet />
     </div>
   );
 };

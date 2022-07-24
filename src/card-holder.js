@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectCard from './mini-components/project-card';
 import { Link } from 'react-router-dom';
 import ProjectIndexes from './project-indexes';
+import './card-holder.css'
 
 const CardHolder = (props) => {
   const projects = ProjectIndexes()

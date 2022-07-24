@@ -117,15 +117,14 @@ h1,
 h2 {
   font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
     sans-serif;
-  font-size: 84px;
   font-weight: normal;
 }
 
 h3 {
-  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
+  /* font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold',
     sans-serif;
   font-size: 35px;
-  font-weight: normal;
+  font-weight: normal; */
 }
 
 main {
@@ -207,72 +206,43 @@ header {
   height: 100%;
 }
 
-.card-holder {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  padding-top: 40px;
+@media screen and (max-width: 960px) {
+  /* * {
+    background-color: #ff000050;
+  } */
+
+  body {
+    font-size: 16px;
+  }
+
+  nav {
+    background-color: #000000de;
+    width: 40vw;
+    transform: translateX(40vw);
+  }
+
+  main {
+  width: 100%;
+  padding: 70px 20px 0;
 }
 
-.card-holder a {
-  text-decoration: none;
+  /* Header */
+
+  .header-container {
+    width: 100%;
+  }
 }
 
-/* Project Card Component */
-.card {
-  background-color: var(--color3);
-  border-radius: 20px;
-  cursor: pointer;
-}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 18px;
+  }
 
-.card-thumbnail {
-}
+  .header-container {
+    height: 70px;
+  }
 
-.card-thumbnail h2 {
-  font-size: 9rem;
-  margin: 0;
-  text-align: right;
-  background-color: var(--color3);
-  padding: 10px;
-  border-radius: 20px 20px 0 0;
-  color: var(--color2);
-  text-decoration: none;
-  opacity: 0.3;
-  transition: opacity 300ms;
-}
-
-.project-desc {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-  transition: border-radius 300ms;
-}
-
-.project-name {
-  color: var(--color2);
-  text-decoration: none;
-}
-
-.link-icon {
-  height: 15px;
-  opacity: 0.3;
-  transition: opacity 300ms;
-}
-
-.link-icon svg {
-  height: 100%;
-}
-
-.card:hover .link-icon {
-  opacity: 1;
-}
-
-.card:hover .card-thumbnail h2 {
-  opacity: 1;
-}
-
-.card:hover .project-desc {
-  border-radius: 10px;
+  .header-logo {
+    height: 20px;
+  }
 }

@@ -3,12 +3,12 @@ function ProjectIndexes() {
     {
       projectId: 1,
       projectName: 'Country Flag',
-      linkPath: '/countries-info',
+      linkPath: '/hello-react/countries-info',
     },
     {
       projectId: 2,
       projectName: 'Counter',
-      linkPath: '/counter',
+      linkPath: '/hello-react/counter',
     },
   ];
 }

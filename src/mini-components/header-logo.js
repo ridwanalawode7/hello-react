@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderLogo = (props) => {
   return (
-    <Link to='/'>
+    <Link to='/hello-react'>
       <div
         className='header-logo'
         role='img'

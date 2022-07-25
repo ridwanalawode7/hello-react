@@ -23,10 +23,16 @@ const App = () => {
         <NavMenu showMenu={navState} handleClick={hideNav} />
         <main>
           <Routes>
-            <Route path='/' element={<CardHolder />} />
-            <Route path='/countries-info' element={<CountryFlag />} />
-            <Route path='/countries-info/country/:code' element={<Country />} />
-            <Route path='/counter' element={<CounterApp />} />
+            <Route path='/hello-react' element={<CardHolder />} />
+            <Route
+              path='/hello-react/countries-info'
+              element={<CountryFlag />}
+            />
+            <Route
+              path='/hello-react/countries-info/country/:code'
+              element={<Country />}
+            />
+            <Route path='/hello-react/counter' element={<CounterApp />} />
           </Routes>
         </main>
       </BrowserRouter>

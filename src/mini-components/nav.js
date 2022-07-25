@@ -32,7 +32,7 @@ const NavMenu = (props) => {
         </svg>
       </div>
       <div className='nav-container'>
-        <Link to={'/'}>
+        <Link to={'/hello-react'}>
           <div className='navItem' onClick={props.handleClick}>
             Home
           </div>

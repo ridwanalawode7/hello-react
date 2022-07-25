@@ -8,6 +8,13 @@ const CardHolder = (props) => {
   const projects = ProjectIndexes()
 
   return (
+    <div>
+      <h1>
+      Hello React
+      </h1>
+      <p>
+        Check out these mini React js projects
+      </p>
     <div className='card-holder'>
       {projects.map((x, y) => (
         <Link to={x.linkPath} key={y}>
@@ -17,6 +24,7 @@ const CardHolder = (props) => {
           />
         </Link>
       ))}
+    </div>
     </div>
   );
 };

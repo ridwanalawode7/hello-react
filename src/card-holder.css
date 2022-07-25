@@ -16,13 +16,10 @@
   cursor: pointer;
 }
 
-.card-thumbnail {
-}
-
 .card-thumbnail h2 {
   font-size: 9rem;
   margin: 0;
-  text-align: right; 
+  text-align: right;
   background-color: var(--color3);
   padding: 10px;
   border-radius: 20px 20px 0 0;
@@ -66,4 +63,18 @@
 
 .card:hover .project-desc {
   border-radius: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .card-holder {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .card-holder {
+    align-items: center;
+    grid-template-columns: 1fr;
+  }
 }

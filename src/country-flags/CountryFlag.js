@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './country-flag.css';
+import { Link } from 'react-router-dom';
 
 const CountryFlag = () => {
   const api_url = 'https://restcountries.com/v3.1/all';
@@ -9,6 +10,7 @@ const CountryFlag = () => {
   let [searchSuggest, setSearchSuggest] = useState([]);
   let [results, setResults] = useState([]);
   let [countries, setCountries] = useState([]);
+  let [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     fetch(api_url)
@@ -25,8 +27,8 @@ const CountryFlag = () => {
   }, []);
 
   function handleChange(e) {
-    console.log(countries);
     e.preventDefault();
+    setSearchText(e.target.value);
     if (e.target.value) {
       let filtList = getSuggetions(e.target.value);
       setSearchSuggest(filtList);
@@ -59,6 +61,7 @@ const CountryFlag = () => {
   function handleClick(e) {
     e.preventDefault();
     setSearchSuggest([]);
+    setSearchText(e.target.innerText);
     let searchParam = e.target.innerText;
     if (searchParam) {
       let resultList = searchObject(searchParam);
@@ -100,6 +103,7 @@ const CountryFlag = () => {
                 type='text'
                 placeholder='Search Countries'
                 className='country-search'
+                value={searchText}
               />
               <div className='search-suggestion'>
                 {searchSuggest.length
@@ -125,18 +129,23 @@ const CountryFlag = () => {
       <div className='search-results'>
         {results.length
           ? results.map((x, y) => (
-              <div key={y} className='result'>
-                <div className='result-flag'>
-                  <img src={x.flags.svg} />
-              </div>
-              <div className='result-name'>
-                <div className='common-name'>{x.name.common }</div>
-                <div className='official-name'>{x.name.official }</div>
-              </div>
-              </div>
+              <Link key={y} to={`country/${x.cca3}`}>
+                <div className='result'>
+                  <div className='result-flag'>
+                    <img src={x.flags.svg} />
+                  </div>
+                  <div className='result-name'>
+                    <div className='common-name'>{x.name.common}</div>
+                    <div className='official-name'>{x.name.official}</div>
+                  </div>
+                </div>
+              </Link>
             ))
           : ''}
       </div>
+      <Link to={`country/test`}>
+        TL
+      </Link>
     </div>
   );
 };

@@ -7,7 +7,7 @@ function ProjectIndexes() {
     },
     {
       projectId: 2,
-      projectName: 'Counter App',
+      projectName: 'Counter',
       linkPath: '/counter',
     },
   ];

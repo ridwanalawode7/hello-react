@@ -1,12 +1,13 @@
 import React from 'react';
 
-const NavButton = () => {
+const NavButton = (props) => {
   return (
     <div
       className='nav-button'
       role='button'
       aria-label='Menu Button'
-      tabIndex='0'>
+      tabIndex='0'
+    onClick={props.handleClick}>
       <svg id='svg9580' viewBox='0 0 25 39.406'>
         <g>
           <path

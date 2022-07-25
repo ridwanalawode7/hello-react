@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <header>
       <div className='header-container'>
-        <NavButton />
+        <NavButton handleClick={props.handleClick} />
         <HeaderLogo />
         <ColorToggle />
       </div>

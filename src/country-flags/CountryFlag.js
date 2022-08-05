@@ -83,12 +83,12 @@ const CountryFlag = () => {
   return (
     <div className='cfh'>
       <div>
-        <h1 className='country-flag-header'>Countries Info</h1>
+        <h1 className='country-flag-header'>Countries&#10024;</h1>
       </div>
       <div>
         <h3 className='dyk'>
-          There are currently <span className='country-no'>{countryNo}</span>{' '}
-          countries in the world
+          You can search <span className='country-no'>{countryNo}</span> of the
+          world countries here!&#128558; Give it a try!
         </h3>
       </div>
 
@@ -100,6 +100,7 @@ const CountryFlag = () => {
                 onChange={handleChange}
                 aria-label='Search Countries'
                 id='searchCountries'
+                autoComplete='off' 
                 type='text'
                 placeholder='Search Countries'
                 className='country-search'
@@ -135,7 +136,7 @@ const CountryFlag = () => {
                     <img src={x.flags.svg} />
                   </div>
                   <div className='result-name'>
-                    <div className='common-name'>{x.name.common}</div>
+                    <div className='common-name'>{x.name.common}&#128279;</div>
                     <div className='official-name'>{x.name.official}</div>
                   </div>
                 </div>
@@ -143,9 +144,15 @@ const CountryFlag = () => {
             ))
           : ''}
       </div>
-      <Link to={`country/test`}>
-        TL
-      </Link>
+
+      <div className='sponsor'>
+        Powered by the
+        <a className='api-link' href='https://restcountries.com/'>
+          {' '}
+          REST Countries&#128279;
+        </a>{' '}
+        api &#128170;
+      </div>
     </div>
   );
 };

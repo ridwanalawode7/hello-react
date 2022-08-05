@@ -114,11 +114,29 @@
   }
 
   .result {
-    width: 400px;
+    width: 100%;
     margin: 10px auto;
     height: 100px;
     border-radius: 20px;
     background-color: var(--color3);
     display: flex;
   }
+
+  .input-cont {
+    width: 100%;
+  }
+
+}
+
+.api-link {
+  color: tomato;
+  transition: color 100ms;
+}
+
+.api-link:hover {
+  color: var(--color2)
+}
+
+.sponsor {
+  text-align: center;
 }

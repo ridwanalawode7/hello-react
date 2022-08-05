@@ -2,6 +2,7 @@
     font-size: 10rem;
     text-align: center;
     margin: 0;
+    padding-top: 100px;
 }
 
 
@@ -23,6 +24,7 @@
     border-radius: 50%;
     user-select: none;
     cursor: pointer;
+    margin-bottom: 50px;
 }
 
 .increment {
@@ -32,4 +34,10 @@
 
 .decrement {
     color: tomato;
+}
+
+.reset {
+    width: calc(10rem + 50px);
+    border-radius: 2.5rem;
+    color: var(--color1)
 }

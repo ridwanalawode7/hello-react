@@ -9,22 +9,17 @@ const CardHolder = (props) => {
 
   return (
     <div>
-      <h1>
-      Hello React
-      </h1>
-      <p>
-        Check out these mini React js projects
+      <h1 className='holder-title'>Hello React! &#129303;</h1>
+      <p className='hello-message'>
+        Check out these mini React js projects. &#128524;
       </p>
-    <div className='card-holder'>
-      {projects.map((x, y) => (
-        <Link to={x.linkPath} key={y}>
-          <ProjectCard
-            projectId={x.projectId}
-            projectName={x.projectName}
-          />
-        </Link>
-      ))}
-    </div>
+      <div className='card-holder'>
+        {projects.map((x, y) => (
+          <Link to={x.linkPath} key={y}>
+            <ProjectCard projectId={x.projectId} projectName={x.projectName} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

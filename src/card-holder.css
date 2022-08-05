@@ -9,6 +9,14 @@
   text-decoration: none;
 }
 
+.holder-title {
+ text-align: center;
+}
+
+.hello-message {
+  text-align: center;
+}
+
 /* Project Card Component */
 .card {
   background-color: var(--color3);

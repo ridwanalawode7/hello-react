@@ -1,0 +1,58 @@
+.frame {
+    fill: none;
+    stroke: var(--color2);
+    stroke-width: 1;
+}
+.second-hand {
+    fill: none;
+    stroke: var(--color2);
+    stroke-width: 0;
+    fill: var(--color2);
+    transform-origin: center;
+    /* animation: rotate-time 60s linear infinite; */
+}
+.long-hand {
+    fill: none;
+    stroke: var(--color2);
+    stroke-width: 1;
+    transform-origin: center;
+}
+.short-hand {
+    fill: none;
+    stroke: var(--color2);
+    stroke-width: 1;
+    transform-origin: center;
+}
+
+.digital {
+    text-align: center;
+}
+
+.clock {
+    display: grid;
+    place-items: center;
+}
+
+.clock-cont {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 960px) {
+    .clock-cont {
+        width: 20vw;
+    }
+}
+
+
+
+
+/* @keyframes rotate-time {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+} */

@@ -6,7 +6,8 @@ import CountryFlag from './country-flags/CountryFlag';
 import CounterApp from './counter-excercise/CounterEx';
 import CardHolder from './card-holder';
 import Country from './country-flags/country';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Clock from './clock/clock';
 const App = () => {
   let [navState, setNaVState] = useState(false);
 
@@ -18,11 +19,12 @@ const App = () => {
   }
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Header handleClick={showNav} />
         <NavMenu showMenu={navState} handleClick={hideNav} />
         <main>
           <Routes>
+            <Route path='/' element={<CardHolder />} />
             <Route path='/hello-react' element={<CardHolder />} />
             <Route
               path='/hello-react/countries-info'
@@ -33,9 +35,10 @@ const App = () => {
               element={<Country />}
             />
             <Route path='/hello-react/counter' element={<CounterApp />} />
+            <Route path='/hello-react/clock' element={<Clock />} />
           </Routes>
         </main>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

@@ -63,7 +63,7 @@ const Country = () => {
             href={
               nameLink ? `https://en.m.wikipedia.org/wiki/${nameLink}` : ''
             }>
-            Learn More
+            Learn More&#128279;
           </a>
         </div>
       </div>

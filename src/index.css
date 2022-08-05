@@ -129,6 +129,7 @@ main {
   width: 920px;
   margin: 0 auto;
   padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 path,
@@ -191,6 +192,18 @@ header {
   align-items: center;
   /* align-self: center; */
   /* justify-self: center; */
+}
+
+.footer-logo svg {
+  height: 100%;
+}
+
+.footer-logo {
+  height: 15px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  justify-self: center;
 }
 
 .header-logo svg {
@@ -341,7 +354,7 @@ nav.menu-opened {
 
   main {
     width: 100%;
-    padding: 70px 20px 0;
+    padding: 70px 20px 50px;
   }
 
   /* Header */
